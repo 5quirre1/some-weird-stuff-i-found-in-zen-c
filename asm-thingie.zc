@@ -1,0 +1,23 @@
+// this doesn't work in the readme example https://github.com/z-libs/Zen-C?tab=readme-ov-file#named-constraints
+
+/*
+[zc] Compiling amazing.zc...
+error: Expected } at end of asm block
+*/
+
+fn add(a: int, b: int) -> int {
+    var result: int;
+    asm {
+        "add {result}, {a}, {b}"
+        : out(result)
+        : in(a), in(b)
+        : clobber("cc")
+    }
+    return result;
+}
+
+fn main()
+{
+    var d = add(2, 5);
+    "{d}";
+}
