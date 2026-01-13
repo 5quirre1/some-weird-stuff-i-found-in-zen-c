@@ -1,0 +1,35 @@
+// there's not a lot on this language but this is how i was able to read a file
+
+/*
+  also for some reason, it says f doesn't exist
+
+  [zc] Compiling amazing.zc...
+  warning: Undefined variable 'f'
+     = help: Did you mean 'f'?
+    --> amazing.zc:9:15
+     |
+  9  |     c = fgetc(f);
+     |               ^ here
+     |
+
+  so that's interesting
+*/
+
+
+fn main()
+{
+  "this is like a SUPERR weird way but it works ig???";
+  var f = fopen("test.txt", "r");
+
+  "printing contents....\n";
+  var mut c: I32;
+  while (true) {
+    c = fgetc(f);
+    if (c == -1) break;
+    putchar(c);
+  }
+
+  "\n";
+
+  defer fclose(f);
+}
