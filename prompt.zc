@@ -1,0 +1,13 @@
+fn main()
+{
+  ? "Prompt text" 
+  /* 
+  [zc] Compiling amazing.zc...
+  out.c: In function ‘main’:
+  out.c:67:59: error: implicit declaration of function ‘readln’; did you mean ‘readlink’? [-Wimplicit-function-declaration]
+     67 | printf(stdout, "%s", "Prompt text"); fflush(stdout);  readln(); });
+        |                                                       ^~~~~~
+        |                                                       readlink
+  C compilation failed.
+  */
+}
