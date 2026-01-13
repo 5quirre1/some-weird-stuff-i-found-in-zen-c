@@ -1,0 +1,16 @@
+fn main()
+{
+  // this prints
+  for i in 0..10
+  {
+    "test1";
+  }
+
+  // doesn't print
+  for i in 0..10
+  {
+    "test2"
+  }
+}
+
+// this may be intentional but maybe not too cause i thought ; was optional LMFAO
