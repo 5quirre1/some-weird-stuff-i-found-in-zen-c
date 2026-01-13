@@ -1,0 +1,41 @@
+fn say_hello(name: string = "greg") -> string
+{
+  "hello {name}";
+  return "swag";
+}
+
+fn main()
+{
+  var named = "gregddd";
+  say_hello(named);
+  say_hello();
+  say_hello(name: "amazing");//oh cool
+  /*
+  "{say_hello()}";
+
+  [zc] Compiling amazing.zc...
+  out.c: In function ‘main’:
+  out.c:72:28: error: too few arguments to function ‘say_hello’
+     72 | ({ fprintf(stdout, _z_str((say_hello())), (say_hello())); fprintf(stdout, "\n"); 0; });
+        |                            ^~~~~~~~~
+  out.c:27:29: note: in definition of macro ‘_z_str’
+     27 | #define _z_str(x) _Generic((x), _Bool: "%d", char: "%c", signed char: "%c", unsigned char: "%u", short: "%d", unsigned short: "%u", int: "%d", unsigned int: "%u", long: "%ld", unsigned long: "%lu", long long: "%lld", unsigned long long: "%llu", float: "%f", double: "%f", char*: "%s", void*: "%p")
+        |                             ^
+  out.c:62:8: note: declared here
+     62 | string say_hello(string name);
+        |        ^~~~~~~~~
+  out.c:72:44: error: too few arguments to function ‘say_hello’
+     72 | ({ fprintf(stdout, _z_str((say_hello())), (say_hello())); fprintf(stdout, "\n"); 0; });
+        |                                            ^~~~~~~~~
+  out.c:62:8: note: declared here
+     62 | string say_hello(string name);
+        |        ^~~~~~~~~
+  C compilation failed.
+
+  it's not allowing for the optional name unlike when doing NORMAL calling
+
+  obv in original c, it doesn't even allow for params optional thing for values idk what to call it really
+
+  but yea weird
+  */
+}
